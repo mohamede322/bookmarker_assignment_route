@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- CSS Links -->
+    <title>Bookmarker</title>
+  </head>
+  <body>
+    <div
+      class="error-container d-none position-fixed start-0 top-0 vw-100 vh-100 d-flex justify-content-center align-items-center"
+    >
+      <div class="invalid-error bg-light p-4 rounded-3">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="circles d-flex">
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+            <span class="rounded-circle me-2"></span>
+          </div>
+          <button class="btn exit-btn border-0">
+            <i class="fa-solid fa-xmark close fs-3"></i>
+          </button>
+        </div>
+        <h2 class="fs-5 my-3">
+          Site Name or Url is not valid, Please follow the rules below :
+        </h2>
+        <p class="fs-5">
+          <i class="fa-regular fa-circle-right p-2 text-danger"></i> Site name
+          must contain at least 3 characters
+        </p>
+        <p class="fs-5">
+          <i class="fa-regular fa-circle-right p-2 text-danger"></i>Site URL
+          must be a valid one
+        </p>
+      </div>
+    </div>
+    <main class="position-relative">
+      <div class="container my-5">
+        <h1 class="position-relative heading m-auto">Bookmarker</h1>
+        <div class="bookmark-body my-5 py-5 px-3">
+          <h2 class="title m-0 text-center mb-5">
+            <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div class="form-group mb-4">
+            <label for="bookmarkName" class="mb-2 fw-bold"
+              ><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name
+            </label>
+            <input
+              type="text"
+              placeholder="Bookmark Name"
+              class="form-control fw-semibold input"
+              id="bookmarkName"
+              name="name"
+            />
+          </div>
+          <div class="form-group mb-4">
+            <label for="siteUrl" class="mb-2 fw-bold"
+              ><i class="fa-solid fa-link pe-2 pe-2"></i> Site URL
+            </label>
+            <input
+              type="text"
+              placeholder="Website URL"
+              class="form-control fw-semibold input"
+              id="siteUrl"
+              name="url"
+            />
+          </div>
+
+          <div class="btn-wrapper text-center">
+            <button
+              class="btn btn-danger px-5 py-2 fs-6 fw-semibold submit-btn"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+        <table class="table">
+          <thead class="text-center bg-light border-0">
+            <td class="fw-bold">Index</td>
+            <td class="fw-bold">Website Name</td>
+            <td class="fw-bold">Visit</td>
+            <td class="fw-bold">Delete</td>
+          </thead>
+          <tbody class="bookmarks"></tbody>
+        </table>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+    <!-- Bootstrap Script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Script -->
+  </body>
+</html>
