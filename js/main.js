@@ -104,7 +104,7 @@ function clearForm() {
 function validate(target) {
   var regex = {
     name: /^[A-z0-9]{2,} ?([A-z0-9]{1,} ?){1,}(?<! )$/,
-    url: /^[A-z0-9]{1,}\.[A-z]{2,5}/,
+    url: /^[A-z0-9]{1,}\.[A-z]{2,5}(?<! )$/,
   };
 
   if (target == "name") {
